@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170522 21:04:22.503" generator="Robot 3.0.2 (Python 2.7.10 on win32)">
+<suite source="C:\Users\u44554\git\RobotSamples\RobotSample" id="s1" name="RobotSample">
+<suite source="C:\Users\u44554\git\RobotSamples\RobotSample\RoboMain" id="s1-s1" name="RoboMain">
+<suite source="C:\Users\u44554\git\RobotSamples\RobotSample\RoboMain\testcases" id="s1-s1-s1" name="Testcases">
+<suite source="C:\Users\u44554\git\RobotSamples\RobotSample\RoboMain\testcases\simplehttprequesttest.robot" id="s1-s1-s1-s1" name="Simplehttprequesttest">
+<test id="s1-s1-s1-s1-t1" name="Test1">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>localhost</arg>
+<arg>http://localhost:8082/SampleRestAPI</arg>
+</arguments>
+<msg timestamp="20170522 21:04:22.955" level="INFO">Creating Session using : alias=localhost, url=http://localhost:8082/SampleRestAPI, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20170522 21:04:22.955" starttime="20170522 21:04:22.955"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>localhost</arg>
+<arg>/wsprovider/BaccRTService/baccRTInfo</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20170522 21:04:23.112" level="INFO">Get Request using : alias=localhost, uri=/wsprovider/BaccRTService/baccRTInfo, headers=None json=None</msg>
+<msg timestamp="20170522 21:04:23.112" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:22.955"></status>
+</kw>
+<kw type="for" name="${item} IN [ @{resp} ]">
+<kw type="foritem" name="${item} = [{&quot;id&quot;:1,&quot;info&quot;:&quot;testdata1&quot;,&quot;macId&quot;:&quot;mac-id-testdata-1&quot;},{&quot;id&quot;:2,&quot;info&quot;:&quot;testdata2&quot;,&quot;macId&quot;:&quot;mac-id-testdata-2&quot;},{&quot;id&quot;:3,&quot;info&quot;:">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>: ${item}</arg>
+</arguments>
+<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+</kw>
+<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+</kw>
+<kw type="foritem" name="${item} = &quot;testdata3&quot;,&quot;macId&quot;:&quot;mac-id-testdata-3&quot;},{&quot;id&quot;:4,&quot;info&quot;:&quot;testdata4&quot;,&quot;macId&quot;:&quot;mac-id-testdata-4&quot;},{&quot;id&quot;:5,&quot;info&quot;:&quot;testdata5&quot;,&quot;mac">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>: ${item}</arg>
+</arguments>
+<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+</kw>
+<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+</kw>
+<kw type="foritem" name="${item} = Id&quot;:&quot;mac-id-testdata-5&quot;}]">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>: ${item}</arg>
+</arguments>
+<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+</kw>
+<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+</kw>
+<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>test success !!!</arg>
+</arguments>
+<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+</kw>
+<status status="PASS" endtime="20170522 21:04:23.128" critical="yes" starttime="20170522 21:04:22.955"></status>
+</test>
+<status status="PASS" endtime="20170522 21:04:23.128" starttime="20170522 21:04:22.612"></status>
+</suite>
+<status status="PASS" endtime="20170522 21:04:23.128" starttime="20170522 21:04:22.612"></status>
+</suite>
+<status status="PASS" endtime="20170522 21:04:23.128" starttime="20170522 21:04:22.612"></status>
+</suite>
+<status status="PASS" endtime="20170522 21:04:23.128" starttime="20170522 21:04:22.550"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="RobotSample" pass="1">RobotSample</stat>
+<stat fail="0" id="s1-s1" name="RoboMain" pass="1">RobotSample.RoboMain</stat>
+<stat fail="0" id="s1-s1-s1" name="Testcases" pass="1">RobotSample.RoboMain.Testcases</stat>
+<stat fail="0" id="s1-s1-s1-s1" name="Simplehttprequesttest" pass="1">RobotSample.RoboMain.Testcases.Simplehttprequesttest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
