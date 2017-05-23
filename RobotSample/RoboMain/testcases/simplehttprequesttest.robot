@@ -19,6 +19,7 @@ Test1
      :FOR  ${item}  IN  @{resp}
       \   log to console  : ${item}
     # whith this you get your only element
-     Log To Console    test success !!!  
+     Log To Console    test success !!!  !
+     
      
      
