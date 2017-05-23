@@ -6,7 +6,6 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="C:/Users/u44554/Downloads/jersey.jar/jersey.jar"/>
 	<classpathentry kind="lib" path="C:/Users/u44554/Downloads/genson-0.95.jar/genson-0.95.jar"/>
@@ -16,5 +15,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container/RestAPItest1"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
