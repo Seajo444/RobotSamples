@@ -14,12 +14,14 @@ Test1
      
      
      Create session     localhost   http://localhost:8082/SampleRestAPI
-     # &{params}=   
-     ${resp}=	Get Request	localhost	/wsprovider/BaccRTService/baccRTInfo   
+     &{params}=   Create Dictionary    key=id   key2=1
+     ${resp}=	Get Request	localhost	/wsprovider/BaccRTService/baccRTInfo    params=${params}
      :FOR  ${item}  IN  @{resp}
       \   log to console  : ${item}
     # whith this you get your only element
      Log To Console    test success !!!
      
+     
+     #params=${params}
      
      

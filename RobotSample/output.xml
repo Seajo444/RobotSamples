@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170522 21:04:22.503" generator="Robot 3.0.2 (Python 2.7.10 on win32)">
+<robot generated="20170524 14:24:42.687" generator="Robot 3.0.2 (Python 2.7.10 on win32)">
 <suite source="C:\Users\u44554\git\RobotSamples\RobotSample" id="s1" name="RobotSample">
 <suite source="C:\Users\u44554\git\RobotSamples\RobotSample\RoboMain" id="s1-s1" name="RoboMain">
 <suite source="C:\Users\u44554\git\RobotSamples\RobotSample\RoboMain\testcases" id="s1-s1-s1" name="Testcases">
@@ -11,71 +11,134 @@
 <arg>localhost</arg>
 <arg>http://localhost:8082/SampleRestAPI</arg>
 </arguments>
-<msg timestamp="20170522 21:04:22.955" level="INFO">Creating Session using : alias=localhost, url=http://localhost:8082/SampleRestAPI, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" endtime="20170522 21:04:22.955" starttime="20170522 21:04:22.955"></status>
+<msg timestamp="20170524 14:24:43.167" level="INFO">Creating Session using : alias=localhost, url=http://localhost:8082/SampleRestAPI, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" endtime="20170524 14:24:43.167" starttime="20170524 14:24:43.167"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>key=1</arg>
+<arg>key2=1</arg>
+</arguments>
+<assign>
+<var>&amp;{params}</var>
+</assign>
+<msg timestamp="20170524 14:24:43.168" level="INFO">&amp;{params} = { key=1 | key2=1 }</msg>
+<status status="PASS" endtime="20170524 14:24:43.168" starttime="20170524 14:24:43.168"></status>
 </kw>
 <kw name="Get Request" library="RequestsLibrary">
 <doc>Send a GET request on the session object found using the</doc>
 <arguments>
 <arg>localhost</arg>
 <arg>/wsprovider/BaccRTService/baccRTInfo</arg>
+<arg>params=1</arg>
 </arguments>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20170522 21:04:23.112" level="INFO">Get Request using : alias=localhost, uri=/wsprovider/BaccRTService/baccRTInfo, headers=None json=None</msg>
-<msg timestamp="20170522 21:04:23.112" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:22.955"></status>
+<msg timestamp="20170524 14:24:43.208" level="INFO">Get Request using : alias=localhost, uri=/wsprovider/BaccRTService/baccRTInfo, headers=None json=None</msg>
+<msg timestamp="20170524 14:24:43.208" level="INFO">${resp} = &lt;Response [404]&gt;</msg>
+<status status="PASS" endtime="20170524 14:24:43.208" starttime="20170524 14:24:43.168"></status>
 </kw>
 <kw type="for" name="${item} IN [ @{resp} ]">
-<kw type="foritem" name="${item} = [{&quot;id&quot;:1,&quot;info&quot;:&quot;testdata1&quot;,&quot;macId&quot;:&quot;mac-id-testdata-1&quot;},{&quot;id&quot;:2,&quot;info&quot;:&quot;testdata2&quot;,&quot;macId&quot;:&quot;mac-id-testdata-2&quot;},{&quot;id&quot;:3,&quot;info&quot;:">
+<kw type="foritem" name="${item} = &lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Apache Tomcat/8.0.21 - Error report&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;H1 {font-family:Tahoma,Arial">
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>: ${item}</arg>
 </arguments>
-<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+<status status="PASS" endtime="20170524 14:24:43.208" starttime="20170524 14:24:43.208"></status>
 </kw>
-<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+<status status="PASS" endtime="20170524 14:24:43.208" starttime="20170524 14:24:43.208"></status>
 </kw>
-<kw type="foritem" name="${item} = &quot;testdata3&quot;,&quot;macId&quot;:&quot;mac-id-testdata-3&quot;},{&quot;id&quot;:4,&quot;info&quot;:&quot;testdata4&quot;,&quot;macId&quot;:&quot;mac-id-testdata-4&quot;},{&quot;id&quot;:5,&quot;info&quot;:&quot;testdata5&quot;,&quot;mac">
+<kw type="foritem" name="${item} = ,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background">
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>: ${item}</arg>
 </arguments>
-<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+<status status="PASS" endtime="20170524 14:24:43.208" starttime="20170524 14:24:43.208"></status>
 </kw>
-<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+<status status="PASS" endtime="20170524 14:24:43.208" starttime="20170524 14:24:43.208"></status>
 </kw>
-<kw type="foritem" name="${item} = Id&quot;:&quot;mac-id-testdata-5&quot;}]">
+<kw type="foritem" name="${item} = -color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BO">
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>: ${item}</arg>
 </arguments>
-<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+<status status="PASS" endtime="20170524 14:24:43.208" starttime="20170524 14:24:43.208"></status>
 </kw>
-<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+<status status="PASS" endtime="20170524 14:24:43.208" starttime="20170524 14:24:43.208"></status>
 </kw>
-<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+<kw type="foritem" name="${item} = DY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>: ${item}</arg>
+</arguments>
+<status status="PASS" endtime="20170524 14:24:43.218" starttime="20170524 14:24:43.208"></status>
+</kw>
+<status status="PASS" endtime="20170524 14:24:43.218" starttime="20170524 14:24:43.208"></status>
+</kw>
+<kw type="foritem" name="${item} = background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>: ${item}</arg>
+</arguments>
+<status status="PASS" endtime="20170524 14:24:43.218" starttime="20170524 14:24:43.218"></status>
+</kw>
+<status status="PASS" endtime="20170524 14:24:43.218" starttime="20170524 14:24:43.218"></status>
+</kw>
+<kw type="foritem" name="${item} = }A.name {color : black;}.line {height: 1px; background-color: #525D76; border: none;}&lt;/style&gt; &lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 404 -">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>: ${item}</arg>
+</arguments>
+<status status="PASS" endtime="20170524 14:24:43.218" starttime="20170524 14:24:43.218"></status>
+</kw>
+<status status="PASS" endtime="20170524 14:24:43.218" starttime="20170524 14:24:43.218"></status>
+</kw>
+<kw type="foritem" name="${item} =  Not Found&lt;/h1&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt; Status report&lt;/p&gt;&lt;p&gt;&lt;b&gt;message&lt;/b&gt; &lt;u&gt;Not Found&lt;/u&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>: ${item}</arg>
+</arguments>
+<status status="PASS" endtime="20170524 14:24:43.218" starttime="20170524 14:24:43.218"></status>
+</kw>
+<status status="PASS" endtime="20170524 14:24:43.218" starttime="20170524 14:24:43.218"></status>
+</kw>
+<kw type="foritem" name="${item} = b&gt; &lt;u&gt;The requested resource is not available.&lt;/u&gt;&lt;/p&gt;&lt;hr class=&quot;line&quot;&gt;&lt;h3&gt;Apache Tomcat/8.0.21&lt;/h3&gt;&lt;/body&gt;&lt;/html&gt;">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>: ${item}</arg>
+</arguments>
+<status status="PASS" endtime="20170524 14:24:43.218" starttime="20170524 14:24:43.218"></status>
+</kw>
+<status status="PASS" endtime="20170524 14:24:43.218" starttime="20170524 14:24:43.218"></status>
+</kw>
+<status status="PASS" endtime="20170524 14:24:43.218" starttime="20170524 14:24:43.208"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>test success !!!</arg>
 </arguments>
-<status status="PASS" endtime="20170522 21:04:23.112" starttime="20170522 21:04:23.112"></status>
+<status status="PASS" endtime="20170524 14:24:43.218" starttime="20170524 14:24:43.218"></status>
 </kw>
-<status status="PASS" endtime="20170522 21:04:23.128" critical="yes" starttime="20170522 21:04:22.955"></status>
+<status status="PASS" endtime="20170524 14:24:43.218" critical="yes" starttime="20170524 14:24:43.167"></status>
 </test>
-<status status="PASS" endtime="20170522 21:04:23.128" starttime="20170522 21:04:22.612"></status>
+<status status="PASS" endtime="20170524 14:24:43.228" starttime="20170524 14:24:42.807"></status>
 </suite>
-<status status="PASS" endtime="20170522 21:04:23.128" starttime="20170522 21:04:22.612"></status>
+<status status="PASS" endtime="20170524 14:24:43.228" starttime="20170524 14:24:42.797"></status>
 </suite>
-<status status="PASS" endtime="20170522 21:04:23.128" starttime="20170522 21:04:22.612"></status>
+<status status="PASS" endtime="20170524 14:24:43.228" starttime="20170524 14:24:42.797"></status>
 </suite>
-<status status="PASS" endtime="20170522 21:04:23.128" starttime="20170522 21:04:22.550"></status>
+<status status="PASS" endtime="20170524 14:24:43.228" starttime="20170524 14:24:42.747"></status>
 </suite>
 <statistics>
 <total>
