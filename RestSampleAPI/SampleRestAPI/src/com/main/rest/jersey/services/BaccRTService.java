@@ -18,9 +18,10 @@ public class BaccRTService {
 	CassendraDbService csdbService;*/
 	
 	@GET
-	@Path("/baccRTInfo")
+	@Path("/baccRTInfo/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<BaccRT> getBaccRTInfoById() {
+	public List<BaccRT> getBaccRTInfoById(@PathParam("id")String id) {
+		System.out.println("passed id"+ id);
 		List<BaccRT> baccRtList = new ArrayList<>();
 		BaccRT b1 = new BaccRT((long) 1,"mac-id-testdata-1","testdata1");
 		BaccRT b2 = new BaccRT((long) 2,"mac-id-testdata-2","testdata2");
